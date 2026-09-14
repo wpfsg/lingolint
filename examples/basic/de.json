@@ -1,0 +1,50 @@
+{
+  "app": {
+    "name": "Notely",
+    "tagline": "Deine Notizen, überall"
+  },
+  "common": {
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "close": "Schließen",
+    "exit": "Abmelden",
+    "loading": "Wird geladen…",
+    "search": "Suchen"
+  },
+  "nav": {
+    "home": "Startseite",
+    "notes": "Notizen",
+    "settings": "Einstellungen",
+    "profile": "Profil"
+  },
+  "auth": {
+    "signIn": "Anmelden",
+    "signOut": "Abmelden",
+    "welcome": "Willkommen zurück, {Name}!",
+    "terms": "Wenn du fortfährst, stimmst du unseren <a>Nutzungsbedingungen</a> zu."
+  },
+  "notes": {
+    "count": "{count} Notizen",
+    "empty": "Du hast noch  keine Notizen.",
+    "lastEdited": "Zuletzt bearbeitet {date}",
+    "deleteConfirm": "<strong>{title}</strong> löschen? Das kann nicht rückgängig gemacht werden.",
+    "shared": "Geteilt mit {{count}} Personen"
+  },
+  "checkout": {
+    "total": "Gesamt: {amount} {currency}",
+    "upgrade": "Auf Pro upgraden",
+    "perMonth": "{{price}} / Monat"
+  },
+  "profile": {
+    "connect": "Verbinden",
+    "connected": "Verbundene Konten",
+    "accountSettings": "Kontoeinstellungen",
+    "apiKeys": "API-Schlüssel"
+  },
+  "errors": {
+    "network": "Netzwerkfehler. Bitte versuche es erneut.",
+    "notFound": "Page not found",
+    "generic": "Etwas ist schiefgelaufen"
+  }
+}

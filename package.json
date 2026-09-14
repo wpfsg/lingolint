@@ -1,0 +1,41 @@
+{
+  "name": "lingolint-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "description": "ESLint for app translations. Catch translation bugs before your users do.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "tsc -b tsconfig.build.json",
+    "build:web": "npm run build --workspace apps/web",
+    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p apps/web/tsconfig.json --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "clean": "rm -rf packages/*/dist packages/*/tsconfig.tsbuildinfo apps/web/dist",
+    "dev:web": "npm run dev --workspace apps/web",
+    "lingolint": "node packages/cli/dist/bin.js",
+    "example": "node packages/cli/dist/bin.js scan ./examples/basic --source en"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^24.0.0",
+    "eslint": "^10.10.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.12.0",
+    "prettier": "^3.9.6",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.70.0",
+    "vitest": "^4.1.11"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "app": {
+    "name": "Notely",
+    "tagline": "Tus notas, en todas partes"
+  },
+  "common": {
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "close": "Cerrar",
+    "exit": "Cerrar",
+    "loading": "Cargando…",
+    "search": "Buscar",
+    "legacyExport": "Exportar (antiguo)"
+  },
+  "nav": {
+    "home": "Inicio",
+    "notes": "Notas",
+    "settings": "Ajustes ",
+    "profile": "Perfil"
+  },
+  "auth": {
+    "signIn": "Iniciar sesión",
+    "signOut": "Cerrar sesión",
+    "welcome": "¡Bienvenido de nuevo, {name}!",
+    "terms": "Al continuar aceptas nuestros <a>Términos del servicio</a>."
+  },
+  "notes": {
+    "count": "{count} notas",
+    "empty": "Todavía no tienes ninguna nota.",
+    "lastEdited": "Última edición {date}",
+    "deleteConfirm": "¿Eliminar <strong>{title}? Esta acción no se puede deshacer.",
+    "shared": "Compartido con {{count}} personas"
+  },
+  "checkout": {
+    "total": "Total: {amount}",
+    "upgrade": "Mejorar a Pro",
+    "perMonth": "{{price}} / mes"
+  },
+  "profile": {
+    "connect": "Conectar con la cuenta",
+    "connected": "Cuentas conectadas",
+    "accountSettings": "Account settings",
+    "apiKeys": "Claves de API"
+  },
+  "errors": {
+    "network": "Error de red. Inténtalo de nuevo.",
+    "notFound": "Página no encontrada",
+    "generic": ""
+  }
+}

@@ -1,0 +1,35 @@
+name: Feature request
+description: Suggest a new check, file format, integration or improvement.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Describe the translation bug or workflow friction, not just the feature.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behaviour
+      description: Example input, expected report, and any configuration you imagine.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - New deterministic QA rule
+        - New file format (YAML, PO, XLIFF, ARB, Android XML, iOS .strings, CSV)
+        - CLI / configuration
+        - Machine-readable output / integrations
+        - AI review
+        - Web interface
+        - Documentation
+        - Other
+  - type: checkboxes
+    id: contribute
+    attributes:
+      label: Contribution
+      options:
+        - label: I am willing to open a pull request for this

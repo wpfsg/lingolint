@@ -1,0 +1,51 @@
+{
+  "name": "@lingolint/ai",
+  "version": "0.1.0",
+  "description": "Optional AI-powered linguistic review for LingoLint: provider adapters, batching and response caching. Bring your own API key.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wpfsg/lingolint.git",
+    "directory": "packages/ai"
+  },
+  "homepage": "https://github.com/wpfsg/lingolint#readme",
+  "bugs": {
+    "url": "https://github.com/wpfsg/lingolint/issues"
+  },
+  "keywords": [
+    "i18n",
+    "localization",
+    "translation",
+    "qa",
+    "ai",
+    "llm"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "clean": "rm -rf dist tsconfig.tsbuildinfo"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.125.0",
+    "@lingolint/core": "0.1.0",
+    "zod": "^4.6.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
