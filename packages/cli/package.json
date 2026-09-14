@@ -1,0 +1,65 @@
+{
+  "name": "lingolint",
+  "version": "0.1.0",
+  "description": "ESLint for app translations. Catch missing keys, broken placeholders, HTML mismatches and untranslated strings before they reach production.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "lingolint": "./dist/bin.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wpfsg/lingolint.git",
+    "directory": "packages/cli"
+  },
+  "homepage": "https://github.com/wpfsg/lingolint#readme",
+  "bugs": {
+    "url": "https://github.com/wpfsg/lingolint/issues"
+  },
+  "keywords": [
+    "i18n",
+    "l10n",
+    "localization",
+    "internationalization",
+    "translation",
+    "translations",
+    "lint",
+    "linter",
+    "qa",
+    "cli",
+    "ci",
+    "json",
+    "placeholders",
+    "i18next",
+    "icu"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "clean": "rm -rf dist tsconfig.tsbuildinfo"
+  },
+  "dependencies": {
+    "@lingolint/ai": "0.1.0",
+    "@lingolint/core": "0.1.0",
+    "commander": "^14.0.3",
+    "jiti": "^2.7.0",
+    "picocolors": "^1.1.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "name": "@lingolint/core",
+  "version": "0.1.0",
+  "description": "The LingoLint translation QA engine: parsers, deterministic rules, scoring and the issue model. Pure TypeScript, no I/O, runs in Node and the browser.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wpfsg/lingolint.git",
+    "directory": "packages/core"
+  },
+  "homepage": "https://github.com/wpfsg/lingolint#readme",
+  "bugs": {
+    "url": "https://github.com/wpfsg/lingolint/issues"
+  },
+  "keywords": [
+    "i18n",
+    "l10n",
+    "localization",
+    "translation",
+    "lint",
+    "qa",
+    "placeholders",
+    "icu"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "clean": "rm -rf dist tsconfig.tsbuildinfo"
+  },
+  "dependencies": {
+    "zod": "^4.6.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

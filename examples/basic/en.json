@@ -1,0 +1,50 @@
+{
+  "app": {
+    "name": "Notely",
+    "tagline": "Your notes, everywhere"
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "close": "Close",
+    "exit": "Exit",
+    "loading": "Loading…",
+    "search": "Search"
+  },
+  "nav": {
+    "home": "Home",
+    "notes": "Notes",
+    "settings": "Settings",
+    "profile": "Profile"
+  },
+  "auth": {
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "welcome": "Welcome back, {name}!",
+    "terms": "By continuing you agree to our <a>Terms of Service</a>."
+  },
+  "notes": {
+    "count": "{count} notes",
+    "empty": "You don't have any notes yet.",
+    "lastEdited": "Last edited {date}",
+    "deleteConfirm": "Delete <strong>{title}</strong>? This cannot be undone.",
+    "shared": "Shared with {{count}} people"
+  },
+  "checkout": {
+    "total": "Total: {amount} {currency}",
+    "upgrade": "Upgrade to Pro",
+    "perMonth": "{{price}} / month"
+  },
+  "profile": {
+    "connect": "Connect",
+    "connected": "Connected accounts",
+    "accountSettings": "Account settings",
+    "apiKeys": "API keys"
+  },
+  "errors": {
+    "network": "Network error. Please try again.",
+    "notFound": "Page not found",
+    "generic": "Something went wrong"
+  }
+}
