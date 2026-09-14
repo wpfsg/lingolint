@@ -294,9 +294,13 @@ report.score; // 95
 report.issues[0].message; // "Missing placeholder: {currency}"
 ```
 
-## Local web interface
+## Web interface
 
-A small local UI for reviewing issues and exporting corrected JSON lives in [`apps/web`](apps/web). It uses the exact same engine and never uploads your files anywhere:
+Try LingoLint without installing anything: **https://wpfsg.github.io/lingolint/**
+
+Drop your locale files in, review issues, edit translations inline and export corrected JSON. It uses the exact same engine as the CLI and runs entirely in your browser; files are parsed in the tab and never uploaded anywhere.
+
+The UI lives in [`apps/web`](apps/web) and is deployed to GitHub Pages on every push to `main`. To run it locally:
 
 ```bash
 npm run dev --workspace apps/web

@@ -1,6 +1,8 @@
 # LingoLint web UI
 
-A small local interface for reviewing translation issues visually. It uses the exact same engine as the CLI (`@lingolint/core`, compiled from source) and runs entirely in the browser: files are parsed in the tab and never uploaded anywhere.
+A small interface for reviewing translation issues visually. It uses the exact same engine as the CLI (`@lingolint/core`, compiled from source) and runs entirely in the browser: files are parsed in the tab and never uploaded anywhere.
+
+Hosted version: **https://wpfsg.github.io/lingolint/** (deployed from `main` by [`deploy-pages.yml`](../../.github/workflows/deploy-pages.yml)). To run it locally:
 
 ```bash
 npm install          # from the repository root
