@@ -8,6 +8,20 @@ updates:
       dev-dependencies:
         dependency-type: development
     open-pull-requests-limit: 5
+    ignore:
+      # LingoLint supports Node.js >= 20.19. These majors raise the floor to
+      # Node 22.12 or conflict with typescript-eslint's supported TypeScript
+      # range. Revisit when Node 20 support is dropped.
+      - dependency-name: commander
+        update-types: ['version-update:semver-major']
+      - dependency-name: vitest
+        update-types: ['version-update:semver-major']
+      - dependency-name: typescript
+        update-types: ['version-update:semver-major']
+      - dependency-name: '@vitejs/plugin-react'
+        update-types: ['version-update:semver-major']
+      - dependency-name: '@types/node'
+        update-types: ['version-update:semver-major']
   - package-ecosystem: github-actions
     directory: /
     schedule:
