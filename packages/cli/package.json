@@ -55,7 +55,7 @@
   "dependencies": {
     "@lingolint/ai": "0.1.0",
     "@lingolint/core": "0.1.0",
-    "commander": "^14.0.3",
+    "commander": "^15.0.0",
     "jiti": "^2.7.0",
     "picocolors": "^1.1.1"
   },
