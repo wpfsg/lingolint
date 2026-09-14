@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-09-14
+
+First public release. Published to npm as `lingolint`, `@lingolint/core` and `@lingolint/ai`; the web interface is hosted at https://wpfsg.github.io/lingolint/.
+
 ### Added
 
 - `lingolint scan` command with pretty and JSON output, configurable failure threshold and CI-friendly exit codes.
