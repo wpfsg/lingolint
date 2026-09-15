@@ -69,6 +69,8 @@ export function Filters({ filters, onChange, groupCounts, summary, ignoredCount 
             key={group.id}
             type="button"
             className={`chip${filters.groups.includes(group.id) ? ' is-active' : ''}`}
+            data-group={group.id}
+            aria-pressed={filters.groups.includes(group.id)}
             onClick={() => {
               toggleGroup(group.id);
             }}

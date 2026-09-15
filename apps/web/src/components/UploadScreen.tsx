@@ -1,6 +1,7 @@
 import { useRef, useState, type DragEvent } from 'react';
 import { localeDisplayName } from '@lingolint/core';
 import type { LoadedLocale } from '../lib/files.js';
+import { Logo } from './Logo.js';
 
 interface UploadScreenProps {
   locales: LoadedLocale[];
@@ -11,6 +12,13 @@ interface UploadScreenProps {
   onRemoveLocale: (locale: string) => void;
   onLoadExample: () => void;
 }
+
+const HIGHLIGHTS: { label: string; tone: string }[] = [
+  { label: 'Missing keys', tone: 'error' },
+  { label: 'Placeholders', tone: 'warning' },
+  { label: 'HTML', tone: 'info' },
+  { label: 'Untranslated', tone: 'neutral' },
+];
 
 export function UploadScreen({
   locales,
@@ -36,14 +44,18 @@ export function UploadScreen({
 
   return (
     <main className="upload">
-      <section className="upload-intro">
-        <h1>Review translations before they ship</h1>
-        <p>
-          Drop your locale JSON files (for example <code>en.json</code>, <code>es.json</code>,{' '}
-          <code>de.json</code>). LingoLint compares every file against the source locale and lists
-          missing keys, broken placeholders, HTML mismatches, untranslated strings and more. Edit,
-          dismiss, and export the corrected file. Everything runs in this tab.
-        </p>
+      <section className="hero">
+        <Logo size="hero" />
+        <h1 className="hero-title">Review translations before they ship.</h1>
+        <p className="hero-subtitle">Locale JSON diffing, in your browser. Nothing is uploaded.</p>
+        <ul className="hero-pills" aria-label="What LingoLint checks">
+          {HIGHLIGHTS.map((item) => (
+            <li key={item.label} className="hero-pill">
+              <span className={`dot dot-${item.tone}`} aria-hidden="true" />
+              {item.label}
+            </li>
+          ))}
+        </ul>
       </section>
 
       <div
@@ -79,8 +91,22 @@ export function UploadScreen({
             }
           }}
         />
+        <span className="dropzone-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22">
+            <path
+              d="M12 16V5m0 0l-4 4m4-4l4 4M5 15v2.5A2.5 2.5 0 0 0 7.5 20h9a2.5 2.5 0 0 0 2.5-2.5V15"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </span>
         <div className="dropzone-title">Drop locale files here</div>
-        <div className="dropzone-hint">or click to choose · .json · one file per locale</div>
+        <div className="dropzone-hint">
+          or click to choose · <code>en.json</code>, <code>de.json</code>, one file per locale
+        </div>
       </div>
 
       {errors.length > 0 ? (
@@ -92,7 +118,7 @@ export function UploadScreen({
       ) : null}
 
       {locales.length > 0 ? (
-        <section className="loaded">
+        <section className="loaded card">
           <div className="loaded-header">
             <h2>Loaded files</h2>
             <label className="field-inline">
@@ -150,13 +176,15 @@ export function UploadScreen({
             </tbody>
           </table>
           {needsMore ? (
-            <p className="muted">Add at least one target locale file to start the review.</p>
+            <p className="muted loaded-note">
+              Add at least one target locale file to start the review.
+            </p>
           ) : null}
         </section>
       ) : null}
 
       <div className="upload-footer">
-        <button type="button" className="btn" onClick={onLoadExample}>
+        <button type="button" className="btn btn-secondary" onClick={onLoadExample}>
           Try the example project
         </button>
         <span className="muted">
