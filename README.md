@@ -8,6 +8,10 @@ ESLint for app translations. LingoLint compares your locale files, finds missing
 npx lingolint scan ./locales --source en
 ```
 
+[![LingoLint web interface: upload locale files, review issues, edit translations and export corrected JSON](docs/lingolint-demo.gif)](https://wpfsg.github.io/lingolint/)
+
+**[Try it in the browser →](https://wpfsg.github.io/lingolint/)** No install, and your files never leave the tab.
+
 ```text
 LingoLint v0.1.0
 
